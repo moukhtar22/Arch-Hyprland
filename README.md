@@ -255,12 +255,19 @@ env = WLR_RENDERER_ALLOW_SOFTWARE,1
 
 #### 📒 Final Notes
 
-- join my discord channel [`Discord`](https://discord.gg/RZJgC7KAKm)
+- join my discord channel [`Discord`](https://discord.com/invite/kool-tech-world)
 - Feel free to copy, re-distribute, and use this script however you want. Would appreciate if you give me some loves by crediting my work :)
+
 
 #### 👍👍👍 Thanks and Credits!
 
 - [`Hyprland`](https://hyprland.org/) Of course to Hyprland and @vaxerski for this awesome Dynamic Tiling Manager.
+
+## 💖 Support
+
+- a Star on my Github repos would be nice 🌟
+
+- Subscribe to my Youtube Channel [YouTube](https://www.youtube.com/@Ja.KooLit)
 
 #### 📹 Youtube videos (Click to view and watch the playlist) 📹
 
