@@ -149,3 +149,13 @@ for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${Extra[@]}"; do
 done
 
 printf "\n%.0s" {1..2}
+
+# Ensure hyprpolkitagent user service is enabled and running
+if systemctl --user list-unit-files 2>/dev/null | grep -q '^hyprpolkitagent\.service'; then
+  if ! systemctl --user is-enabled --quiet hyprpolkitagent 2>/dev/null; then
+    systemctl --user enable hyprpolkitagent 2>&1 | tee -a "$LOG" || true
+  fi
+  if ! systemctl --user is-active --quiet hyprpolkitagent 2>/dev/null; then
+    systemctl --user start hyprpolkitagent 2>&1 | tee -a "$LOG" || true
+  fi
+fi
