@@ -93,3 +93,12 @@ else
     echo "${NOTE} Missing packages logged at $(date)" >> "$LOG"
 fi
 
+# Check hyprpolkitagent user service status
+if systemctl --user list-unit-files 2>/dev/null | grep -q '^hyprpolkitagent\.service'; then
+    if systemctl --user is-active --quiet hyprpolkitagent 2>/dev/null; then
+        echo "${OK} hyprpolkitagent user service is running." | tee -a "$LOG"
+    else
+        echo "${WARN} hyprpolkitagent user service is not running." | tee -a "$LOG"
+    fi
+fi
+
